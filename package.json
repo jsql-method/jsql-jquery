@@ -1,6 +1,6 @@
 {
   "name": "jsql-jquery",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "description": "JSQL plugin for jQuery",
   "main": "jsql-jquery.min.js",
   "scripts": {},
@@ -11,10 +11,15 @@
     "jsql-optimization"
   ],
   "author": "JSQL",
-  "license": "ISC",
+  "licenses": [
+    {
+      "type": "LicenseRef-LICENSE",
+      "url": "https://jsql.it/public-packages-license"
+    }
+  ],
   "dependencies": {
     "jquery": "latest",
-    "jsql-core": "^1.1.6"
+    "jsql-core": "^1.1.8"
   },
   "devDependencies": {
     "grunt": "^1.0.3",

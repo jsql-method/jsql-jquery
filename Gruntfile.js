@@ -1,9 +1,8 @@
 /*
- * jsql
- *
- * Copyright (c) 2018 JSQL
- * Licensed under the ISC license.
+ * Copyright (c) 2017-2019 JSQL Sp. z.o.o. (Ltd, LLC) www.jsql.it
+ * See LICENSE or https://jsql.it/public-packages-license
  */
+
 
 'use strict';
 
@@ -29,11 +28,11 @@ module.exports = function (grunt) {
                 dest: 'dist/jsql-jquery-bundle.js'
             },
             localAlone: {
-                src: ['../jsql-js-core/dist/jsql-core.min.js', 'src/jsql-jquery.js'],
+                src: ['../jsql-js-core/dist/jsql-core.js', 'src/jsql-jquery.js'],
                 dest: 'dist/jsql-jquery.js'
             },
             localBundle: {
-                src: ['node_modules/jquery/dist/jquery.min.js', '../jsql-js-core/dist/jsql-core.min.js', 'src/jsql-jquery.js'],
+                src: ['node_modules/jquery/dist/jquery.min.js', '../jsql-js-core/dist/jsql-core.js', 'src/jsql-jquery.js'],
                 dest: 'dist/jsql-jquery-bundle.js'
             }
 		},
@@ -58,7 +57,7 @@ module.exports = function (grunt) {
                     {
                         expand: true,
                         cwd: '.',
-                        src: ['isc.md', 'package.json'],
+                        src: ['LICENSE.md', 'package.json'],
                         dest: './dist'
                     }
                 ]
@@ -74,7 +73,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-clean');
 
-    grunt.registerTask('dev', ['concat:localAlone', 'concat:localBundle', 'uglify']);
+    grunt.registerTask('dev', ['concat:localAlone', 'concat:localBundle']);
     grunt.registerTask('default', ['clean:files', 'concat:distAlone', 'concat:distBundle', 'uglify', 'copy', 'clean:publish']);
 
 };
