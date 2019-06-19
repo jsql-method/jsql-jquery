@@ -1,6 +1,6 @@
 {
   "name": "jsql-jquery",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "JSQL plugin for jQuery",
   "main": "jsql-jquery.min.js",
   "scripts": {},
@@ -19,7 +19,7 @@
   ],
   "dependencies": {
     "jquery": "latest",
-    "jsql-core": "^1.7.0"
+    "jsql-core": "^1.8.0"
   },
   "devDependencies": {
     "grunt": "^1.0.3",
